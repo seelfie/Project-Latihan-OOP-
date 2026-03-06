@@ -1,10 +1,12 @@
 # Project-Latihan-OOP
+Nama: Silfi Rochmatul Auliyah 
+NRP: 5027251008
+
 ---
-`silfi`
 ## 1. Enkapsulasi
 Enkapsulasi merupakan proses pembungkusan variabel dan method menjadi  satu unit tunggal (Class) yang juga bertujuan untuk menyembunyikan detail data dari pihak luar. Dengan enkapsulasi, isi dan cara kerja di dalam sebuah class tidak perlu diketahui oleh orang luar. Hal ini membuat kode lebih mudah diatur dan diubah tanpa mengganggu bagian lain. Selain itu, setiap class jadi punya tugasnya masing-masing sehingga program lebih rapi dan mudah diperbaiki kalau ada masalah. 
 
-Dalam project saya atribut ```nama``` dan ```nilai``` menggunakan private, sehingga tidak bisa diakses langsung dari luar class. Lalu agar dapat membaca datanya harus lewat getter yaitu ```getNama()``` dan ```getNilai()```, sedangkan untuk mengubahnya harus lewat setter yaitu ```setNama()``` dan ```setNilai()```. Bahkan pada ```setNilai()``` terdapat validasi sehingga nilai tidak bisa diisi sembarangan di luar range 0-100. 
+Dalam project saya atribut ```nama``` dan ```nilai``` menggunakan private, sehingga tidak bisa diakses langsung dari luar class. Lalu agar dapat membaca datanya harus lewat getter yaitu ```getNama()``` dan ```getNilai()```, sedangkan untuk mengubahnya harus lewat setter yaitu ```setNama()``` dan ```setNilai()```. Pada ```setNilai()``` terdapat validasi sehingga nilai tidak bisa diisi sembarangan di luar range 0-100. 
 
 ```java
 public class Mahasiswa {
