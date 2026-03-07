@@ -7,7 +7,7 @@
 Enkapsulasi merupakan proses pembungkusan variabel dan method menjadi satu unit tunggal (Class) yang juga bertujuan untuk menyembunyikan detail data dari pihak luar. Dengan konsep ini, isi dan cara kerja di dalam sebuah class tidak perlu diketahui oleh orang luar. 
 
 Dalam project saya `Class Mahasiswa` memiliki atribut `nama` dan `nilai` yang menggunakan private, sehingga tidak bisa diakses langsung dari luar class. 
-```java
+```
     private String nama;
     private int nilai;
 ```
