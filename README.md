@@ -4,7 +4,7 @@
 
 ---
 ## 1. Enkapsulasi
-Enkapsulasi merupakan proses pembungkusan variabel dan method menjadi satu unit tunggal (Class) yang juga bertujuan untuk menyembunyikan detail data dari pihak luar. Dengan enkapsulasi, isi dan cara kerja di dalam sebuah class tidak perlu diketahui oleh orang luar. Konsep ini membuat kode lebih mudah diatur dan diubah tanpa mengganggu bagian lain. Selain itu, setiap class jadi punya tugasnya masing-masing sehingga program lebih rapi dan mudah diperbaiki kalau ada masalah. 
+Enkapsulasi merupakan proses pembungkusan variabel dan method menjadi satu unit tunggal (Class) yang juga bertujuan untuk menyembunyikan detail data dari pihak luar. Dengan konsep ini, isi dan cara kerja di dalam sebuah class tidak perlu diketahui oleh orang luar. 
 
 Dalam project saya `Class Mahasiswa` memiliki atribut `nama` dan `nilai` yang menggunakan private, sehingga tidak bisa diakses langsung dari luar class. 
 ```java
@@ -29,10 +29,10 @@ Lalu agar dapat membaca datanya harus lewat getter yaitu `getNama()` dan `getNil
 ```
 - Getter
 ```java
-    public String getNama () {
+    public String getNama() {
         return nama; 
     }
-    public int getNilai () {
+    public int getNilai() {
         return nilai;
     }
 ```
@@ -82,7 +82,7 @@ public class Mahasiswa {
 
 
 ## 2. Inheritance 
-Inheritance merupakan konsep yang memungkinkan suatu kelas untuk mewarisi properti dan perilaku dari kelas lain. Konsep ini membantu menciptakan kelas dari sebuah kelas yang sudah ada, mendorong penggunaan kembali kode, dan membantu mengorganisasi kode dengan lebih baik. 
+Inheritance merupakan konsep yang memungkinkan suatu kelas untuk mewarisi properti dan perilaku dari kelas lain. Konsep ini membantu menciptakan kelas baru dari sebuah kelas yang sudah ada, mendorong penggunaan kembali kode, dan membantu mengorganisasi kode dengan lebih baik. 
 
 Pada project latihan inheritance ini saya membuat `class Kendaraan` sebagai base class dan untuk subclassnya terdiri dari `class Mobil` dan `class Motor`. 
 
@@ -92,7 +92,7 @@ public class Kendaraan {
     private int kecepatan;
     private String warna;
     
-    public Kendaraan () {}
+    public Kendaraan() {}
 
     public Kendaraan (String merk, int kecepatan, String warna) {
         this.merk = merk;
@@ -110,13 +110,13 @@ public class Kendaraan {
         this.warna = warna;
     }
 
-    public String getMerk () {
+    public String getMerk() {
         return merk;
     }
-    public int getKecepatan () {
+    public int getKecepatan() {
         return kecepatan;
     }
-    public String getWarna () {
+    public String getWarna() {
         return warna;
     }
 
@@ -153,13 +153,13 @@ public class Kendaraan {
 }
 
 class Mobil extends Kendaraan {
-    public void usingAC () {
+    public void usingAC() {
         System.out.println("AC sedang digunakan.");
     }
 }
 
 class Motor extends Kendaraan {
-    public void wheelie () {
+    public void wheelie() {
         System.out.println("Motor sedang wheelie!");
     }
 }
@@ -169,10 +169,10 @@ class Motor extends Kendaraan {
 ## 3. Polymorphism 
 Polymorphism merupakan suatu konsep yang memungkinkan sebuah method yang sama memiliki penerapan yang berbeda di setiap class turunannya. 
 
-Berikut project latihan saya terkait penerapan konsep polymorphism.
+Pada latihan ini, class induk yaitu `class Shape` memiliki method `hitungLuas()` yang juga akan digunakan oleh subclass. Namun perhitungan di dalamnya dioverride tergantung rumus masing-masing subclass. Berikut kode lengkap project latihan saya terkait penerapan konsep polymorphism.
 ```java
 public class Shape {
-    public Shape () {
+    public Shape() {
 
     }
     public double hitungLuas (double x) {
@@ -207,6 +207,8 @@ class Square extends Shape {
 
 ## 4. Abstraction 
 Abstraction merupakan konsep di mana detail proses yang rumit disembunyikan dan hanya menampilkan fungsionalitas yang diperlukan. 
+
+Dalam latihan, saya menerapkan konsep ini dengan membuat method `sajikan()` di `class Menu` sebagai template method yang harus diisi oleh `class Makanan` dan `class Minuman` sesuai jenisnya. `class Makanan` mengisi method tersebut dengan menampilkan nama dan porsi, sedangkan `class Minuman` menampilkan nama dan suhu minumannya.
 
 ```java
 public class Menu {
